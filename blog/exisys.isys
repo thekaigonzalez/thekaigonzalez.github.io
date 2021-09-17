@@ -1,0 +1,7 @@
+** comment ;
+
+** This works since it's contained in parenthesis. ;
+(PRINT hello,
+world);
+
+

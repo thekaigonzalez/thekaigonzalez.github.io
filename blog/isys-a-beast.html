@@ -1,0 +1,113 @@
+<h1>ISys: A whole 'nother beast.</h1>
+
+<p>
+
+ISys is a strict, imperative, functional programming language written by Kai Gonzalez (me :)),
+lets see the core language and break it down a bit.
+
+</p>
+
+<h2>The Start of ISys</h2>
+
+<p>
+
+ISys started as a tiny project to test how good Kai's lexer skills were, which then started adding more features to become
+an entire Programming language.
+<br>
+The Programming language isn't used for anything too major, but recent changes allow including, and OS checks.
+
+</p>
+
+<h2>ISys Lexer</h2>
+
+<p>
+
+ISys contains the following features.
+<br>
+<li>Lexer</li>
+<li>AST (very cheap, simple)</li>
+<li>Parser (very simple)</li>
+<li>Function handler (very simple, few functions)</li>
+<li>And an Include system.</li>
+<br>
+An example code would be:
+
+<pre>
+**comment ;
+(PRINT hello, world!);
+
+</pre>
+
+Lets break this code down.
+
+<br>
+
+<b>( & )</b>
+<br>
+This is called ISys's <b>Lisp</b> interface.
+<br>
+These are optional, but are recommended.
+<b>THIS SECTION IS OBFUSCATE AFTER FIX!!! ISYS NO LONGER HAS "BLEED" AND CHECKS ALL TOKENS ACCORDINGLY</b>
+ISys has something called a "BLEED", it's like a marker. Check this out:
+<br>
+There is a small chance for this code to print hello PRINT world, since there's no ';' separating it.
+
+<pre>
+
+PRINT hello PRINT world!;
+
+</pre>
+But if you do,
+
+<pre>
+
+PRINT hello; PRINT world!;
+
+</pre>
+That will just print helloworld (or possibly hello world)
+<pre>
+
+PRINT hello
+PRINT
+
+</pre>
+
+</p>
+
+<h2>Why don't strings use '"'</h2>
+
+<p>
+
+ISys has it's own string rules.
+
+<pre>if [string] is not reserved then print, else then evaluate</pre>
+
+It's a dynamic string, so something like
+
+PRINT 'hello, world!'
+
+Can just be 
+
+PRINT hello, world!
+
+</p>
+
+<h2>Flexibility</h2>
+
+<p>
+
+ISys's syntax is very flexible in terms of Readability, check this out
+
+</p>
+
+<pre>
+
+(PRINT
+	hello);
+(PRINT hello;PRINT world); ** statements in statements, what the f- ;
+
+IF Linux DO (EXECUTE gcc -v && echo hello);
+
+</pre>
+
+

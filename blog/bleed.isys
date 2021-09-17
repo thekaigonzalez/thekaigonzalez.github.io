@@ -1,0 +1,5 @@
+** BLEED is where without ';', a statement falls into another. ;
+(PRINT
+	hello);
+PRINT 'hello world this is statment: PRINT world;'
+IF Linux DO (EXECUTE gcc -v && echo hello);
